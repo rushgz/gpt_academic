@@ -31,27 +31,27 @@ else:
     proxies = None
 
 # [step 3]>> 模型选择是 (注意: LLM_MODEL是默认选中的模型, 它*必须*被包含在AVAIL_LLM_MODELS列表中 )
-LLM_MODEL = "gpt-3.5-turbo-16k" # 可选 ↓↓↓
-AVAIL_LLM_MODELS = ["gpt-4-1106-preview", "gpt-4-turbo-preview", "gpt-4-vision-preview",
-                    "gpt-4o", "gpt-4-turbo", "gpt-4-turbo-2024-04-09",
-                    "gpt-3.5-turbo-1106", "gpt-3.5-turbo-16k", "gpt-3.5-turbo", "azure-gpt-3.5",
-                    "gpt-4", "gpt-4-32k", "azure-gpt-4", "glm-4", "glm-4v", "glm-3-turbo",
-                    "gemini-pro", "chatglm3"
-                    ]
+LLM_MODEL = "qwen-local" # 可选 ↓↓↓
+# AVAIL_LLM_MODELS = ["gpt-4-1106-preview", "gpt-4-turbo-preview", "gpt-4-vision-preview",
+#                     "gpt-4o", "gpt-4-turbo", "gpt-4-turbo-2024-04-09",
+#                     "gpt-3.5-turbo-1106", "gpt-3.5-turbo-16k", "gpt-3.5-turbo", "azure-gpt-3.5",
+#                     "gpt-4", "gpt-4-32k", "azure-gpt-4", "glm-4", "glm-4v", "glm-3-turbo",
+#                     "gemini-pro", "chatglm3"
+#                     ]
 # --- --- --- ---
 # P.S. 其他可用的模型还包括
-# AVAIL_LLM_MODELS = [
-#   "glm-4-0520", "glm-4-air", "glm-4-airx", "glm-4-flash",
-#   "qianfan", "deepseekcoder",
-#   "spark", "sparkv2", "sparkv3", "sparkv3.5",
-#   "qwen-turbo", "qwen-plus", "qwen-max", "qwen-local",
-#   "moonshot-v1-128k", "moonshot-v1-32k", "moonshot-v1-8k",
-#   "gpt-3.5-turbo-0613", "gpt-3.5-turbo-16k-0613", "gpt-3.5-turbo-0125", "gpt-4o-2024-05-13"
-#   "claude-3-haiku-20240307","claude-3-sonnet-20240229","claude-3-opus-20240229", "claude-2.1", "claude-instant-1.2",
-#   "moss", "llama2", "chatglm_onnx", "internlm", "jittorllms_pangualpha", "jittorllms_llama",
-#   "deepseek-chat" ,"deepseek-coder",
-#   "yi-34b-chat-0205","yi-34b-chat-200k","yi-large","yi-medium","yi-spark","yi-large-turbo","yi-large-preview",
-# ]
+AVAIL_LLM_MODELS = [
+  "glm-4-0520", "glm-4-air", "glm-4-airx", "glm-4-flash",
+  "qianfan", "deepseekcoder",
+  "spark", "sparkv2", "sparkv3", "sparkv3.5",
+  "qwen-turbo", "qwen-plus", "qwen-max", "qwen-local",
+  "moonshot-v1-128k", "moonshot-v1-32k", "moonshot-v1-8k",
+  "gpt-3.5-turbo-0613", "gpt-3.5-turbo-16k-0613", "gpt-3.5-turbo-0125", "gpt-4o-2024-05-13"
+  "claude-3-haiku-20240307","claude-3-sonnet-20240229","claude-3-opus-20240229", "claude-2.1", "claude-instant-1.2",
+  "moss", "llama2", "chatglm_onnx", "internlm", "jittorllms_pangualpha", "jittorllms_llama",
+  "deepseek-chat" ,"deepseek-coder",
+  "yi-34b-chat-0205","yi-34b-chat-200k","yi-large","yi-medium","yi-spark","yi-large-turbo","yi-large-preview",
+]
 # --- --- --- ---
 # 此外，您还可以在接入one-api/vllm/ollama时，
 # 使用"one-api-*","vllm-*","ollama-*"前缀直接使用非标准方式接入的模型，例如
@@ -125,7 +125,7 @@ MULTI_QUERY_LLM_MODELS = "gpt-3.5-turbo&chatglm3"
 # 选择本地模型变体（只有当AVAIL_LLM_MODELS包含了对应本地模型时，才会起作用）
 # 如果你选择Qwen系列的模型，那么请在下面的QWEN_MODEL_SELECTION中指定具体的模型
 # 也可以是具体的模型路径
-QWEN_LOCAL_MODEL_SELECTION = "Qwen/Qwen-1_8B-Chat-Int8"
+QWEN_LOCAL_MODEL_SELECTION = "Qwen/Qwen1.5-7B-Chat"
 
 
 # 接入通义千问在线大模型 https://dashscope.console.aliyun.com/
